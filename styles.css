@@ -1,0 +1,575 @@
+
+
+* {
+  box-sizing: border-box
+}
+
+ul, li, body, html {
+  margin: 0;
+  padding: 0;
+}
+/*BACKGROUND GRADIENT COLOR */
+body {
+  /*background-image: linear-gradient(#FFBB3F, #002664);*/
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+ul, li {
+  list-style: none;
+}
+
+/* Styles */
+header {
+  width: 100vw;
+  background: #fafafa;
+}
+
+/* Make both navs full width and flex, with some spacing off parent */
+#top-nav, #bottom-nav {
+  width: 100vw;
+  display: flex;
+  padding: 10px 5px;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Separate both nav chidren to each side of the container with justify-content */
+#top-nav {
+  justify-content: space-between;
+  background: #FFBB3F;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+      .jumbotron {
+          background: url('pics/banner_sm.png');
+          background-size: cover;
+          background-position: center;
+      }
+
+      .card {
+        width: auto;
+      }
+  }
+  @media only screen and (min-width: 899px) and (max-width: 1024px) {
+      .jumbotron {
+          background: url('pics/banner_med.png');
+          background-size: cover;
+          background-position: 0% 50%;
+          height: 154px;
+      }
+      .card {
+        width: auto;
+      }
+  }
+  @media only screen and (min-width: 1023px) and (max-width: 1500px) {
+      .jumbotron {
+          background: url('pics/banner_lg.png');
+          background-size: cover;
+          background-position: 0% 50%;
+          height: 154px;
+      }
+      .card {
+        width: auto;
+      }
+  }
+  @media only screen and (min-width: 1499px) {
+      .jumbotron {
+          background: url('wssl_banner_xl copy.png');
+          background-size: cover;
+          background-position: center center;
+          height: 154px;
+      }
+      .card {
+        width: auto;
+      }
+  }
+
+  @media screen and (min-width: 2600px) {
+     .jumbotron {
+        background-repeat: no-repeat;
+          background-position: 0;
+        height: 325px;
+    }
+    .card {
+        width: auto;
+      }
+   }
+
+
+.jumbotron {
+  width: 100vw;
+  height: 154px;
+  justify-content: center;
+  display: block;
+  margin-bottom: 0;
+}
+
+#mastheadWrapper {
+  background-color: #D3D3D3;
+  position: sticky;
+}
+
+/* Bottom Nav, in example is just one section of links, you can expiriment with justify-content based on how many links you have and the width of any container you may need. This example was full-wdith. */
+#bottom-nav {
+  justify-content: space-around;
+  background: #002664;
+  border-bottom: 4px solid #FFBB3F;
+  width: 100vw;
+  display: flex;
+  padding: 10px 5px;
+}
+
+#bottom-nav a {
+  margin: 0 5px;
+  /* you can adjust spacing with margins if you want */
+  color: #FFBB3F;
+  text-decoration: none;
+}
+
+nav.navbar {
+  width: 100%;
+}
+
+#navbarNav {
+  padding: 0; }
+  #navbarNav .nav-list {
+    justify-content: center; }
+    #navbarNav .nav-list li {
+      padding: 0 22px 0 11px; }
+      #navbarNav .nav-list li ul li {
+        padding: 0; }
+      #navbarNav .nav-list li:first-of-type {
+        padding-left: 0; }
+      #navbarNav .nav-list li > a {
+        color: #06121b;
+        font-family: 'Fjalla One';
+        text-transform: uppercase;
+        font-size: 1.025em;
+        letter-spacing: 0.05em;
+        padding: 0; }
+      #navbarNav .nav-list li:focus > a, #navbarNav .nav-list li:hover > a, #navbarNav .nav-list li.active > a {
+        color: #ef832f;
+        text-decoration: none; }
+
+#navbarNav .dropdown-menu {
+  padding: 15px 20px;
+  margin-top: 0;
+  border-radius: 0;
+  border-top: 3px solid #2d2f30; }
+  #navbarNav .dropdown-menu li {
+    padding: 6px 0; }
+    #navbarNav .dropdown-menu li.sub-nav-header {
+      color: #ef832f;
+      font-family: "Fjalla One";
+      text-transform: uppercase; }
+  #navbarNav .dropdown-menu li a {
+    color: #fcc04d;
+    font-weight: 600;
+    font-family: "Noto Sans";
+    font-size: .9em;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 1.18em; }
+
+.nav-toggler-title {
+  color: #06121b;
+  text-transform: uppercase;
+  font-family: "Fjalla One";
+  margin-top: 5px;
+  display: inline-block;
+  padding-right: 4px; }
+
+.dropdown-toggle .dropdown-menu {
+  display: none;
+  min-width: 20em; }
+  .dropdown-toggle .dropdown-menu.dropdown-menu-lg {
+    min-width: 680px;
+    width: 100%; }
+
+.dropdown-toggle:hover .dropdown-menu {
+  display: block; }
+
+.navbar .nav-item {
+  padding: 0 10px;
+  position: relative; }
+.navbar .dropdown-toggle::after {
+  top: 50%;
+  right: 8px;
+  position: absolute;
+  margin: 0; }
+
+  .wrap-for-mobile-menu {
+    left: -100%;
+    width: 100%; }
+    .wrap-for-mobile-menu.show {
+      position: absolute;
+      background: white;
+      height: 100%;
+      top: 0;
+      left: 0;
+      padding: 25px;
+      width: 70%;
+      z-index: 9999; }
+      .wrap-for-mobile-menu.show ul.nav-list.nav {
+        flex-direction: column; }
+
+  #navbarMobileNav {
+    padding: 0; }
+    #navbarMobileNav .nav-link {
+      display: inline-block; }
+    #navbarMobileNav .dropdown-menu {
+      padding: 0;
+      margin-top: 0;
+      border-radius: 0;
+      border-top: 3px solid #2d2f30;
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0; }
+      #navbarMobileNav .dropdown-menu li {
+        padding: 10px 5px !important; }
+        #navbarMobileNav .dropdown-menu li.sub-nav-header {
+          color: #ef832f;
+          font-family: "Fjalla One";
+          text-transform: uppercase;
+          font-size: 1.25em; }
+      #navbarMobileNav .dropdown-menu li a {
+        color: #fcc04d;
+        font-weight: 600;
+        font-family: "Noto Sans";
+        font-size: 1.25em !important;
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 1.18em; }
+    #navbarMobileNav .nav-list li {
+      padding: 15px 5px; }
+      #navbarMobileNav .nav-list li > a {
+        color: #06121b;
+        font-family: 'Fjalla One';
+        text-transform: uppercase;
+        font-size: 1.5em;
+        letter-spacing: 0.05em;
+        padding: 0;
+        text-align: center; }
+      #navbarMobileNav .nav-list li:focus > a, #navbarMobileNav .nav-list li:hover > a, #navbarMobileNav .nav-list li.active > a {
+        color: #ef832f;
+        text-decoration: none; }
+    #navbarMobileNav .dropdown-toggle .dropdown-menu {
+      position: relative;
+      width: 100%; }
+
+  #navbarNav .dropdown-menu.dropdown-left {
+    left: auto;
+    right: 0; }
+
+  .grey-call-out {
+    background: #f0f3f5;
+    border: 1px solid #dfdbdb;
+    margin-top: 26px;
+    padding: 10px 10px 20px;
+    margin-bottom: 26px; }
+    .grey-call-out .btn {
+      width: 100%;
+      max-width: 302px;
+      padding: 8px 1px;
+      letter-spacing: 0.1em; }
+    .grey-call-out p {
+      font-size: 1em;
+      line-height: 2rem;
+      letter-spacing: 0.02em;
+      font-weight: 600;
+      margin-bottom: 10px; }
+      .grey-call-out p a {
+        font-weight: bold; }
+
+  .vip-program p {
+    margin-top: 25px;
+    font-size: 0.938em;
+    color: #1b2b34;
+    letter-spacing: 0.025em;
+    line-height: 1.55rem; }
+
+  .img-link-wrapper .col-sm-4 {
+    position: relative;
+    border: 1px solid white; }
+    .img-link-wrapper .col-sm-4 h3 {
+      font-size: 0.90em;
+      padding: 10px 5px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: #fefefe;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.25rem; }
+    .img-link-wrapper .col-sm-4:focus h3, .img-link-wrapper .col-sm-4:hover h3 {
+      color: #ef832f; }
+  .img-link-wrapper a {
+    display: block; }
+/*.subnav-header {
+  text-align: center;
+  text-transform: bold;
+  color: #FFBB3F;
+  border: solid 2px #FFBB3F;;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: #002664;
+  opacity: 0.9;
+}
+.dropdown-btn {
+  color: #FFBB3F;
+  text-decoration: none;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #ddd;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}*/
+/*where container and grid begin*/
+
+#slider,
+.wrap,
+.slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.wrap {
+  position: relative;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.slide1 {
+  background-image: url("pics/purple_jerseys.jpg");
+}
+.slide2 {
+  background-image: url("pics/soccer_boys.jpg");
+}
+.slide3 {
+  background-image: url("pics/soccer girl.jpg");
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-content span {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  top: 8px;
+  right: 45px;
+  left: 8px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent #fff transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent #fff;
+  right: 0;
+  margin-right: 30px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(5, 20%);
+  grid-gap: 1em;
+  margin-top: 1em;
+  margin-right: 1em;
+  margin-left: 1em;
+
+}
+
+.footer {
+  border: 2px solid #FFBB3F;
+  background-color: white;
+}
+
+.card-container {
+  display: grid;
+  grid-gap: 20px;
+}
+
+
+ #white-footer-nav {
+  background-color: white;
+  justify-content: space-around;
+  display: flex;
+  border: 2px solid #FFBB3F;
+  height: 5em;
+  align-items: center;
+ }
+
+ #white-footer-nav a{
+  text-decoration: none;
+  color: #002664;
+  font-weight: bold;
+ }
+
+ #blue-footer-nav {
+  background-color: #002664;
+  justify-content: space-around;
+  display: flex;
+  height: 7em;
+  align-items: top;
+  padding: 20px;
+  width: 100vw;
+ }
+
+
+ #blue-footer-nav a{
+  text-decoration: none;
+  color: #FFBB3F;
+ }
+
+ /*cards*/
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #FFBB3F;
+  background: white;
+  color: black;
+  justify-content: center;
+}
+.card h1 {
+  width: 100%;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #002664;
+  color: #FFBB3F;
+  margin-top: 0px;
+}
+
+.ref-icon {
+  height: 23px;
+  color: #FFBB3F;
+  margin-top: 4px;
+}
+
+.card p {
+  width: 80%;
+}
+
+.card img {
+  margin: auto;
+}
+
+.card * {
+  margin-top: 0;
+}
+
+.card-content {
+  display: flex;
+}
+.socials {
+  display: flex;
+  justify-content: space-between;
+  margin: 7px;
+  padding: 7px;
+
+}
+
+.donate-button {
+  font-size: 20px;
+  background-color: #002664;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.donate-button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.fa fa-facebook-official:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.fa fa-facebook-official {
+  color: #002664;
+}
+
+
