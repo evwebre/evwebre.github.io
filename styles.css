@@ -39,6 +39,10 @@ header {
   padding-right: 0;
 }
 
+.li{
+  width: 10%;
+}
+
 /* Separate both nav chidren to each side of the container with justify-content */
 #top-nav {
   justify-content: space-between;
@@ -58,6 +62,15 @@ header {
   justify-content: center;
   display: block;
   margin-bottom: 0;
+  background: url('banner_med.png');
+}
+
+.img-fluid {
+
+  max-width: 100%;
+  height: auto;
+
+
 }
 
 #mastheadWrapper {
@@ -87,10 +100,6 @@ nav.navbar {
   width: 100%;
 }
 
-.navbar.navbar-expand-lg.class {
-  display: flex;
-  justify-content: space-around;
-}
 
 #navbarNav {
   padding: 0;
@@ -345,6 +354,11 @@ nav.navbar {
   width: 100%;
 }
 
+.navbar-nav{
+  flex: 1;
+  width: 100%;
+  justify-content: space-around;
+}
 
  #white-footer-nav {
   background-color: white;
@@ -366,7 +380,7 @@ nav.navbar {
   justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
-  height: 7em;
+  height: 100%;
   align-items: top;
   padding: 20px;
   width: 100vw;
@@ -432,6 +446,8 @@ nav.navbar {
   flex-wrap: wrap;
 }
 
+
+
 .donate-button {
   font-size: 20px;
   background-color: #002664;
@@ -464,49 +480,6 @@ nav.navbar {
 }
 
 
-@media only screen and (max-width: 900px) {
-
-  .jumbotron {
-    background: url('pics/banner_sm.png');
-    background-size: cover;
-    background-position: center;
-  }
-
-}
-
-@media only screen and (min-width: 899px) and (max-width: 1024px) {
-  .jumbotron {
-    background: url('pics/banner_med.png');
-    background-size: cover;
-    background-position: 0% 50%;
-    height: 154px;
-  }
-
-}
-
-@media only screen and (min-width: 1023px) and (max-width: 1500px) {
-  .jumbotron {
-    background: url('pics/banner_lg.png');
-    background-size: cover;
-    background-position: 0% 50%;
-    height: 154px;
-
-  }
-}
-  @media only screen and (min-width: 1499px) {
-    .jumbotron {
-      background: url('pics/wssl_banner_xl copy.png');
-      background-size: cover;
-      background-position: center center;
-      height: 300px;
-    }
-  }
-    @media screen and (min-width: 2600px) {
-      .jumbotron {
-        background-repeat: no-repeat;
-        background-position: 0;
-        height: 325px;
-      }
 
       .card {
         width: auto;
