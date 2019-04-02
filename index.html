@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="styles.css" class="">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="./script.js"></script>
+
+  
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <style type="text/css">
     .dropdown-submenu {
@@ -29,6 +36,39 @@
       margin-right: .1rem;
     }
 
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+a{
+  color:white;
+}
+
+a:hover{
+  color:black;
+}
+a:focus{
+  color:#FFBB3F;
+}
+
   </style>
 </head>
 
@@ -40,30 +80,32 @@
 
     </nav>
 
-    <img src="pics/wssl_banner_xl copy.png" class="img-fluid" alt="Responsive image">
+    <img src="pics/wssl_banner_xl copy.png" class="img-fluid" style="margin-bottom:5px;" alt="Responsive image">
 
 
     <!--paste original nav bar code here-->
 
     <div class="container-fluid" style="width: 100%;">
-      <nav class="navbar-expand-md navbar" style=" color:#FFBB3F;   border-style:solid; background-color: #002664;">
+      <nav class="navbar-expand-md navbar" style="  border-bottom-color: #002664;     border-style: solid; background-color: #002664;">
 
-        <a class="nav-item active" style=" color:#FFBB3F;" href="#">Home</a>
+        <a class="nav-item active"href="#" >HOME</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" style="background-color:#FFBB3F; border-style: dotted;"></span>
         </button>
 
+       
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent" style=" color:#FFBB3F;">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a style=" color:#FFBB3F;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Program
+              <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" data aria-haspopup="true" aria-expanded="false">
+                PROGRAMS
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                <li><a class="dropdown-item" href="#">Core</a></li>
+                <li><a class="dropdown-item" href="#">Travel</a></li>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Additional Training</a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Submenu action</a></li>
                     <li><a class="dropdown-item" href="#">Another submenu action</a></li>
@@ -72,50 +114,36 @@
               </ul>
             </li>
             <li class="nav-item active">
-              <a style=" color:#FFBB3F;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Register
+              <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                REGISTRATION
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Core/VIP</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Submenu action</a></li>
-                    <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+                    <li><a class="dropdown-item" href="#">action</a></li>
+                    <li><a class="dropdown-item" href="#">another action</a></li>
+                    <li><a class="dropdown-item" href="#">Tournament</a></li>
                   </ul>
                 </li>
-                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Action</a>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Dev Academy</a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Submenu action</a></li>
                     <li><a class="dropdown-item" href="#">Another submenu action</a></li>
                   </ul>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Travel</a></li>
+                <li><a class="dropdown-item" href="#">Tournament</a></li>
               </ul>
             </li>
 
 
             <li class="nav-item active">
-              <a style=" color:#FFBB3F;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Coaches
+              <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                SCHEDULES
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Submenu action</a></li>
-                    <li><a class="dropdown-item" href="#">Another submenu action</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item active">
-              <a style=" color:#FFBB3F;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Referee
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                <li><a class="dropdown-item" href="#">Games</a></li>
+                <li><a class="dropdown-item" href="#">Training</a></li>
+                <li class="dropdown-submenu pull-left"><a class="dropdown-item dropdown-toggle" href="#">Bus</a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Submenu action</a></li>
                     <li><a class="dropdown-item" href="#">Another submenu action</a></li>
@@ -123,80 +151,49 @@
                 </li>
               </ul>
             </li>
+
             <li class="nav-item active">
-              <a style=" color:#FFBB3F;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Volunteer
+              <a  class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                FIELDS
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                VOLUNTEERS
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Coaches</a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Submenu action</a></li>
                     <li><a class="dropdown-item" href="#">Another submenu action</a></li>
                   </ul>
                 </li>
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Referees</a></li>
+                <li><a class="dropdown-item" href="#">Other Roles</a></li>
 
               </ul>
             </li>
             <li class="nav-item active">
-              <a style=" color:#FFBB3F;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Schedule/Fields
+              <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ABOUT
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Submenu action</a></li>
-                    <li><a class="dropdown-item" href="#">Another submenu action</a></li>
-                  </ul>
-                </li>
+                <li><a class="dropdown-item" href="#">History</a></li>
+                <li><a class="dropdown-item" href="#">Leadership</a></li>
+                <li><a class="dropdown-item" href="#">Help</a></li>
+                <li><a class="dropdown-item" href="#">Contact Us</a></li>
               </ul>
             </li>
             <li class="nav-item active">
-              <a style=" color:#FFBB3F;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Extra
+              <a  class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                BLOG
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a class="dropdown-item" href="#">Submenu action</a></li>
-                    <li><a class="dropdown-item" href="#">Another submenu action</a></li>
-                  </ul>
-                </li>
-              </ul>
             </li>
 
 
             <li class="nav-item active">
-              <a style=" color:#FFBB3F;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Post Season
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-
-
-            <li class="nav-item">
-              <a style=" color:#FFBB3F;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Cup
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <a style=" color:#FFBB3F;" class="nav-link" href="#" role="hover" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <a  class="nav-link" href="#" id="navbarDropdown" role="hover" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                LOGIN
               </a>
             </li>
           </ul>
@@ -208,7 +205,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-lg-6 col-md-6 col-xs-12">
 
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top:12px;">
           <div class="carousel-inner">
@@ -251,7 +248,7 @@
           <div class="card1 card">
             <h1>Spring Registration Open</h1>
             <div class="card-content">
-              <i class="fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>
+              <i class="fa fa-pencil-square-o fa-3x" style="padding-left:10px;" aria-hidden="true"></i>
               <p>Core registration for Spring 2019 is now open. <a href="#">Register here</a></p>
             </div>
           </div>
@@ -260,7 +257,7 @@
           <div class="card2 card">
             <h1>CORE WINTER SCHEDULE</h1>
             <div class="card-content">
-              <i class="fa fa-list-ol fa-3x" aria-hidden="true"></i>
+              <i class="fa fa-list-ol fa-3x" style="padding-left:10px;"  aria-hidden="true"></i>
               <p>Core winter schedule has been published and is available <a href="#">here</a></p>
             </div>
           </div>
@@ -269,7 +266,8 @@
           <div class="card3 card">
             <h1>BECOME A COACH/REFEREE</h1>
             <div class="card-content">
-              <img src="pics/whistle.svg" height="40px">
+              <i class="fa fa-clock-o fa-3x" style="padding-left:10px;" aria-hidden="true"></i>
+             <!--  <img src="pics/whistle.svg" height="40px"> -->
               <p>Registration for the youth winter referee course is now open. <a href="#">Register here</a></p>
             </div>
           </div>
@@ -278,18 +276,12 @@
           <div class="card4 card">
             <h1>FIELD STATUS</h1>
             <div class="card-content">
-              <i class="fa fa-sun-o fa-3x" aria-hidden="true"></i>
+              <i class="fa fa-sun-o fa-3x" style="padding-left:10px;" aria-hidden="true"></i>
               <p>Winter Mon, Wed, Sat DA sessions have openings <a href="#">Register here</a></p>
             </div>
           </div>
         </div>
-        <div class="col-md-12 col-xs-12">
-          <div class="socials">
-            <button class="donate-button ">DONATE</button>
-            <a href="#"><i class="fa fa-facebook-official fa-4x" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-instagram fa-4x" aria-hidden="true"></i></a>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -299,22 +291,20 @@
     <a href="#"><i class="fa fa-trophy" aria-hidden="true"></i>Divisions</a>
     <a href="#"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Schedules</a>
     <a href="#"><i class="fa fa-futbol-o" aria-hidden="true"></i>Fields</a>
-    <a href="#"><i class="fa fa-usd" aria-hidden="true"></i>Donate</a>
+    <a href="#" data-toggle="tooltip" title="Hooray!"><i class="fa fa-usd" aria-hidden="true"></i>Donate</a>
     <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Shop</a>
+    <a href="#top-nav" style=" color:black; font: bold xx-large;"><i class="fas fa-arrow-up" aria-hidden="true"></i>back to top</a>
   </nav>
   <ul class="nav-list nav">
-    <nav id="blue-footer-nav">
-      <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">PROGRAMS</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">REGISTRATION</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">SCHEDULES</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">FIELDS</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">VOLUNTEER</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">BLOG</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">HELP</a></li>
-    </nav>
-  </ul>
+    
+      <div class="col-md-12 col-xs-12">
+        <div class="socials">
+          
+          <a href="#"><i class="fa fa-facebook-official fa-4x" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-instagram fa-4x" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      </ul>
   </div>
 
 
@@ -323,6 +313,13 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/bootstrap-dropdownhover.min.js"></script>
 
   <script type="text/javascript">
     // you can switch the event here 'click' or 'mouseenter' to determine the behavior of the sub menu
@@ -343,6 +340,13 @@
     });
 
   </script>
+
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
+  </script>
+  
 </body>
 
 </html>
